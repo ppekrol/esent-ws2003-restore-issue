@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{603BD78B-63FF-4800-8196-C37C71224892}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EsentTest</RootNamespace>
+    <AssemblyName>EsentTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Esent.Collections">
+      <HintPath>..\packages\ManagedEsent.1.8.2\lib\net40\Esent.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Esent.Interop">
+      <HintPath>..\packages\ManagedEsent.1.8.2\lib\net40\Esent.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configurator.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Backup\DB1\AlbumsByCountSold.all-existing-index-files" />
+    <None Include="Backup\DB1\AlbumsByGenre.all-existing-index-files" />
+    <None Include="Backup\DB1\Artists.all-existing-index-files" />
+    <None Include="Backup\DB1\IndexDefinitions\AlbumsByCountSold.index" />
+    <None Include="Backup\DB1\IndexDefinitions\AlbumsByGenre.index" />
+    <None Include="Backup\DB1\IndexDefinitions\Artists.index" />
+    <None Include="Backup\DB1\IndexDefinitions\Raven%252fDocumentsByEntityName.index" />
+    <None Include="Backup\DB1\IndexDefinitions\SoldAlbums.index" />
+    <None Include="Backup\DB1\Indexes\AlbumsByCountSold\index-files.required-for-index-restore" />
+    <None Include="Backup\DB1\Indexes\AlbumsByCountSold\index.version" />
+    <None Include="Backup\DB1\Indexes\AlbumsByCountSold\segments.gen" />
+    <None Include="Backup\DB1\Indexes\AlbumsByCountSold\segments_2" />
+    <None Include="Backup\DB1\Indexes\AlbumsByCountSold\_0.cfs" />
+    <None Include="Backup\DB1\Indexes\AlbumsByGenre\index-files.required-for-index-restore" />
+    <None Include="Backup\DB1\Indexes\AlbumsByGenre\index.version" />
+    <None Include="Backup\DB1\Indexes\AlbumsByGenre\segments.gen" />
+    <None Include="Backup\DB1\Indexes\AlbumsByGenre\segments_2" />
+    <None Include="Backup\DB1\Indexes\AlbumsByGenre\_0.cfs" />
+    <None Include="Backup\DB1\Indexes\Artists\index-files.required-for-index-restore" />
+    <None Include="Backup\DB1\Indexes\Artists\index.version" />
+    <None Include="Backup\DB1\Indexes\Artists\segments.gen" />
+    <None Include="Backup\DB1\Indexes\Artists\segments_2" />
+    <None Include="Backup\DB1\Indexes\Artists\_0.cfs" />
+    <None Include="Backup\DB1\Indexes\Raven%252fDocumentsByEntityName\index-files.required-for-index-restore" />
+    <None Include="Backup\DB1\Indexes\Raven%252fDocumentsByEntityName\index.version" />
+    <None Include="Backup\DB1\Indexes\Raven%252fDocumentsByEntityName\segments.gen" />
+    <None Include="Backup\DB1\Indexes\Raven%252fDocumentsByEntityName\segments_2" />
+    <None Include="Backup\DB1\Indexes\Raven%252fDocumentsByEntityName\_0.cfs" />
+    <None Include="Backup\DB1\Indexes\SoldAlbums\index-files.required-for-index-restore" />
+    <None Include="Backup\DB1\Indexes\SoldAlbums\index.version" />
+    <None Include="Backup\DB1\Indexes\SoldAlbums\segments.gen" />
+    <None Include="Backup\DB1\Indexes\SoldAlbums\segments_1" />
+    <None Include="Backup\DB1\new\Data" />
+    <None Include="Backup\DB1\new\Data.pat" />
+    <None Include="Backup\DB1\new\RVN00001.log" />
+    <None Include="Backup\DB1\Raven%252fDocumentsByEntityName.all-existing-index-files" />
+    <None Include="Backup\DB1\RavenDB.Backup" />
+    <None Include="Backup\DB1\SoldAlbums.all-existing-index-files" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
